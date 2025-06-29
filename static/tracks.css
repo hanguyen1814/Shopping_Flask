@@ -1,0 +1,81 @@
+main{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 30px;
+}
+
+.items-tracks-container {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+     gap: 20px 10px;
+     width: 60%;
+     justify-items: center;
+}
+
+.voucher-item{
+     background-color: #ffffff;
+     border: 1px solid #ddd;
+     border-radius: 8px;
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+     padding: 15px;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     gap: 15px;
+     max-width: 450px;
+}
+
+.voucher-header{
+     display: flex;
+     justify-content: flex-start;
+     gap: 10px;
+}
+
+.voucher-header .img{
+     display: flex;
+     width: 90px;
+     height: 90px;
+     flex-direction: column;
+     align-items: center;
+     background-color: #EE4D2D;
+     padding: 10px;
+     border-radius: 8px;
+}
+
+.voucher-header .img img{
+     width: 100%;
+     height: auto;
+     object-fit: cover;
+}
+
+.voucher-header .voucher-title{
+     padding: 10px;
+     flex: 1
+}
+
+.voucher-details{
+     display: flex;
+     flex-direction: column;
+     gap: 5px;
+     padding: 5px;
+}
+
+
+
+
+
+#btn-info {
+     display: flex;
+     width: 100%;
+     margin-top: 15px;
+     flex: 1;
+}
+
+
+/* mobile */
+@media (max-width: 768px) {
+     .items-tracks-container {
+          width: 80%;
+     }
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>Giao diện Xu</title>
+     <style>
+          body {
+               font-family: Arial, sans-serif;
+               margin: 0;
+               padding: 0;
+               background-color: #f5f5f5;
+          }
+
+          .container {
+               width: 100%;
+               max-width: 800px;
+               margin: 20px auto;
+               background-color: #fff;
+               box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+               border-radius: 8px;
+               overflow: hidden;
+          }
+
+          .header {
+               display: flex;
+               justify-content: center;
+               padding: 10px 0;
+               background-color: #f8f8f8;
+               border-bottom: 1px solid #ddd;
+          }
+
+          .tab {
+               flex: 1;
+               text-align: center;
+               padding: 10px 0;
+               cursor: pointer;
+               font-size: 16px;
+               font-weight: bold;
+          }
+
+          .active {
+               border-bottom: 2px solid #e91e63;
+               color: #e91e63;
+          }
+
+          .notice {
+               padding: 10px;
+               background-color: #ffcc80;
+               color: #000;
+               text-align: center;
+               font-size: 14px;
+          }
+
+          .shop-list {
+               padding: 10px 20px;
+          }
+
+          .hidden {
+               display: none;
+          }
+
+          .shop-item {
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+               padding: 10px;
+               margin: 10px 0;
+               border: 1px solid #ddd;
+               border-radius: 5px;
+               background-color: #fff;
+               flex-direction: column;
+          }
+
+          .shop-info {
+               display: flex;
+               flex-direction: column;
+          }
+
+          .reward {
+               display: flex;
+               align-items: center;
+               font-size: 16px;
+               font-weight: bold;
+               color: #fbc02d;
+          }
+
+          .reward img {
+               width: 20px;
+               height: 20px;
+               margin-left: 5px;
+          }
+
+          .button {
+               background-color: #e91e63;
+               color: #fff;
+               padding: 8px 15px;
+               border: none;
+               border-radius: 5px;
+               cursor: pointer;
+          }
+
+          .button:hover {
+               background-color: #d81b60;
+          }
+
+          .time {
+               font-size: 12px;
+               color: #666;
+          }
+     </style>
+</head>
+
+<body>
+     <div class="container">
+          <!-- Tabs -->
+          <div class="header">
+               <div class="tab active" onclick="showTab('vongquay')">Vòng Quay</div>
+               <div class="tab" onclick="showTab('xu')">Xu ế</div>
+          </div>
+
+          <!-- Notice -->
+          <div class="notice">
+               Tham gia nhóm <a href="https://t.me/sanliveshopee" target="_blank">https://t.me/sanliveshopee</a> để nhận xu!
+          </div>
+
+          <!-- Content Vòng Quay -->
+          <div id="vongquay" class="shop-list">
+               <div class="shop-item">
+                    <!-- <div class="shop-info">
+                         <strong>#1 Shop Nhật Phong</strong>
+                         <span class="reward">200<img src="coin-icon.png" alt="coin"></span>
+                         <span>Đang é: 42 slot</span>
+                         <span class="time">Bắt đầu lúc: 3 phút trước</span>
+                    </div>
+                    <button class="button">Zô ngay</button> -->
+                    <img src="../image/vongquay.jpg" alt="" style="width: 80%;">
+               </div>
+          </div>
+
+          <!-- Content Xu ế -->
+          <div id="xu" class="shop-list hidden">
+               <div class="shop-item">
+                    <!-- <div class="shop-info">
+                         <strong>#1 Xu ế Shop</strong>
+                         <span class="reward">150<img src="coin-icon.png" alt="coin"></span>
+                         <span>Đang é: 10 slot</span>
+                         <span class="time">Bắt đầu lúc: 2 phút trước</span>
+                    </div>
+                    <button class="button">Tham gia</button> -->
+                    <img src="../image/xu.jpg" alt="" style="width: 80%;">
+               </div>
+          </div>
+     </div>
+
+     <script>
+          function showTab(tab) {
+               document.querySelectorAll('.shop-list').forEach(el => el.classList.add('hidden'));
+               document.querySelector(`#${tab}`).classList.remove('hidden');
+
+               document.querySelectorAll('.tab').forEach(el => el.classList.remove('active'));
+               event.target.classList.add('active');
+          }
+     </script>
+</body>
+
+</html>

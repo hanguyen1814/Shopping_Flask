@@ -1,0 +1,373 @@
+main {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 30px;
+}
+
+.container{
+     margin: 0 auto !important;
+     max-width: 80%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 20px
+}
+
+
+
+
+/* input container */
+.input-container {
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+     margin: 50px 50px 0 50px !important; 
+     align-items: center;
+}
+
+#input-prd {
+     width: 80%;
+     min-height: 30px;
+     padding: 5px;
+}
+
+
+
+
+/* product-item */
+/* product-item */
+.prd-container {
+     width: 80%;
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+     gap: 20px;
+     margin-top: 20px;
+     border: 1px solid #e1e1e1;
+     padding: 20px;
+     justify-items: center;
+     justify-content: space-evenly;
+}
+
+.prd-item {
+     border: 1px solid #e1e1e1;
+     width: 220px;
+     /* height: 400px; */
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     border-radius: 8px;
+}
+
+.prd-img {
+     position: relative;
+     display: inline-block;
+     margin-top: 10px !important;
+}
+
+.prd-img img {
+     width: 200px;
+     height: auto;
+     object-fit: cover;
+     border-radius: 8px;
+     border: 1px solid #000000;
+}
+
+#discount {
+     position: absolute;
+     top: 0;
+     left: 0;
+     background-color: #FF0000;
+     color: white;
+     padding: 0 5px;
+     font-size: 14px;
+     font-weight: bold;
+     border-radius: 8px 0 8px 0;
+}
+
+#cashback {
+     position: absolute;
+     top: 0;
+     right: 0;
+     background-color: #F8C71A;
+     color: white;
+     padding: 0 5px;
+     font-size: 14px;
+     font-weight: bold;
+     border-radius: 0 0 0 8px;
+}
+
+#sold-amount {
+     position: absolute;
+     bottom: 0;
+     right: 0;
+     background-color: #999999;
+     color: white;
+     padding: 0 5px;
+     font-size: 14px;
+     /* font-weight: bold; */
+     border-radius: 8px 0 8px 0;
+}
+
+.prd-info {
+     width: 100%;
+     padding: 0 15px;
+}
+
+.prd-name {
+     font-size: 0.8rem;
+     font-weight: bold;
+     display: -webkit-box;
+     -webkit-box-orient: vertical;
+     -webkit-line-clamp: 2;
+     line-clamp: 2;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     width: 100%;
+     /* Đặt chiều rộng phù hợp */
+}
+
+.prd-price {
+     display: flex;
+     justify-content: space-between;
+     padding: 5px;
+     align-items: center;
+
+}
+
+.prd-price p{
+     margin: 0 !important;
+}
+
+#cur-price {
+     color: red;
+     font-weight: bold;
+     font-size: 1.2rem;
+}
+
+
+/* button */
+
+
+.btn-prd{
+     display: flex;
+     flex-direction: column;
+     margin: 10px 0 !important;
+     width: 100%;
+     align-items: center;
+     gap: 5px;
+}
+
+.btn-item{
+     /* padding: 10px 20px; */
+     width: 60%;
+     background-color: #007bff;
+     color: white !important;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+     font-weight: bold ;
+     padding: 5px;
+     text-align: center;
+     text-decoration: none;
+}
+
+.btn-item:hover{
+     background-color: #0069d9;
+     color: white !important;
+}
+
+/* info product container */
+.info-pro-container{
+     display: flex;
+     gap: 30px;
+     margin: 30px 0!important;
+     justify-content: center;
+}
+
+.info-img img{
+     width: 400px;
+     height: 400px;
+     object-fit: cover;
+     border-radius: 8px;
+     border: 1px solid #e1e1e1;
+}
+
+.info-details{
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+}
+
+.info-name{
+     font-size: 20px;
+     font-weight: bold;
+     color: #007bff;
+}
+
+
+.info-sold{
+     font-weight: bold;
+}
+
+.info-price{
+     /* margin: 15px !important; */
+     display: flex;
+     align-items: center;
+     gap: 30px;
+}
+
+.info-price .price{
+     font-size: 24px;
+     font-weight: bold;
+     color: #e53935;
+}
+
+.info-price .original-price{
+     font-size: 14px;
+     text-decoration: line-through;
+     color: #888;
+}
+.info-cash{
+     font-size: 16px;
+     background-color: #ffeeba;
+     padding: 10px;
+     border-radius: 6px;
+     color: #856404;
+}
+
+.mini-info{
+     display: flex;
+     gap: 30px;
+     justify-content: space-between;
+}
+
+.info-btn{
+     display: flex;
+     justify-content: center;
+     width: 100%;
+}
+
+#btn-same{
+     display: none;
+}
+
+
+/* Add CSS styles for the table */
+
+.reviews{
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+     margin-top: 20px;
+}
+
+.reviews .title{
+     text-align: center;
+     font-size: 20px;
+     font-weight: bold;
+}
+.data-table {
+     width: 100%;
+     border-collapse: collapse;
+     border-radius: 8px;
+}
+
+.data-table th,
+.data-table td {
+     border: 1px solid #ddd;
+     padding: 8px;
+}
+
+.data-table th {
+     text-align: center;
+     background-color: #0069D9;
+     color: white;
+     width: 50%;
+}
+
+.data-table tr:nth-child(even) {
+     background-color: #f9f9f9;
+}
+
+.data-table tr:hover {
+     background-color: #ddd;
+}
+
+.data-table tr td {
+     text-align: center;
+}
+
+
+@media screen and (min-width: 768px) {
+     .container form {
+          display: flex;
+          align-items: center;
+          /* Căn giữa theo chiều dọc */
+          gap: 10px;
+          /* Khoảng cách giữa các phần tử */
+     }
+
+     form .btn-container {
+          width: 10% !important;
+          gap: 10px;
+     }
+
+     .info-pro-container {
+          width: 70%;
+     }
+
+     .reviews {
+          width: 60%;
+     }
+}
+
+/* mobile */
+@media screen and (max-width: 768px) {
+
+     .info-img img {
+          width: 100%;
+          height: auto;
+     }
+
+     .info-pro-container {
+          flex-direction: column;
+          width: 80%;
+          align-items: center;
+     }
+
+     .reviews {
+          width: 80%;
+     }
+
+     .container{
+          max-width: 100%;
+     }
+
+     .btn-prd{
+          display: none;
+     }
+     .prd-img img{
+          width: 130px;
+     }
+     .prd-item{
+          width: 150px;
+     }
+     .prd-name{
+          font-size: 0.8rem;
+     }
+     .prd-container{
+          grid-template-columns: repeat(auto-fit, minmax(100px, 140px));
+     }
+     .prd-price p{
+          font-size: 0.9rem !important;
+     }
+     .prd-price{
+          flex-direction: column-reverse;
+     }
+     .prd-container {
+          width: 100%;
+     }
+}
+

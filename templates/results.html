@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Discount Results</title>
+</head>
+
+<body>
+     <h1>Kết quả mã giảm giá</h1>
+     <ul>
+          {% for result in results %}
+          <li>
+               Link: <a href="{{ result.link }}" target="_blank">{{ result.link }}</a><br>
+               Mã: {{ result.code }}<br>
+               Hợp lệ: {{ "Có" if result.valid else "Không" }}<br>
+               Giảm giá: {{ result.discount }}<br>
+               Mô tả: {{ result.description }}
+          </li>
+          {% endfor %}
+     </ul>
+     <a href="/">Quay lại</a>
+</body>
+
+</html>

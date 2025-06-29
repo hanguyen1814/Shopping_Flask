@@ -1,0 +1,137 @@
+* {
+     margin: 0 ;
+     padding: 0;
+     box-sizing: border-box
+}
+
+body{
+     font-family: 'Roboto', sans-serif;
+     background-color: #fff;
+}
+
+a{
+     text-decoration: none;
+}
+
+header{
+     /* position: sticky;
+     top:0;
+     left: 0;
+     width: 100%;
+     background-color: #212121;
+     z-index: 1000; */
+     border-bottom: 1px solid #333;
+     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+     margin-bottom: 100px;
+}
+
+.navbar-nav .nav-item {
+     margin-right: 15px;
+     /* Tăng khoảng cách bên phải */
+}
+
+.container{
+     margin: 0 auto;
+     max-width: 80%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     
+}
+
+.inner-header{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 20px 10px;
+     /* max-width: 100% !important; */
+}
+
+#logo{
+     color: #fff;
+     text-transform: uppercase;
+     font-size: 1.5rem;
+     font-weight: bold;
+     letter-spacing: 1px;
+     display: flex;
+     gap: 10px;
+     align-items: center;
+     padding-left: 15px;
+}
+
+ul#main-menu{
+     display: flex;
+}
+
+ul#main-menu a{
+     text-transform: uppercase;
+     color: #fff;
+     padding: 10px 20px;
+     display: block;
+     font-weight: bold;
+}
+
+ul#main-menu li:hover{
+     background-color: #676767;
+}
+
+/* #content{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 20px;
+} */
+
+form{
+     width: 100%;
+}
+
+form textarea{
+     width: 100%;
+     padding: 10px;
+     margin: 5px 0;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+}
+
+#box-area{
+     width: 100%;
+     padding: 10px;
+     margin: 5px 0;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+}
+
+
+.btn-container {
+     display: flex;
+     gap: 20px;
+     align-items: center;
+     width: 100%;
+}
+
+.btn {
+     padding: 10px 20px;
+     background-color: #212529 !important;
+     color: #fff !important;
+     border: none;
+     cursor: pointer;
+     width: 50%;
+     /* font-weight: bold !important; */
+     /* font-size: large !important; */
+}
+
+.info-container{
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+     align-items: center;
+     width: 80%;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+     #logo{
+          font-size: 1.2rem;
+     }
+}

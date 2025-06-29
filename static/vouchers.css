@@ -1,0 +1,56 @@
+.tabs {
+     display: flex;
+     justify-content: center;
+     gap: 15px;
+     margin-bottom: 20px;
+}
+
+.tab {
+     padding: 10px 20px;
+     border: 1px solid #ddd;
+     border-radius: 5px;
+     background-color: #ffffff;
+     cursor: pointer;
+     font-weight: bold;
+}
+
+.tab.active {
+     background-color: #28a745;
+     color: #ffffff;
+     border-color: #28a745;
+}
+
+.tracks-container{
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+
+.grid {
+     display: none;
+}
+
+.grid.active {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+     gap: 20px 10px;
+     justify-items: center;
+     width: 80%;
+}
+
+.btn:hover {
+     background-color: #218838;
+}
+
+.note {
+     font-size: 12px;
+     color: #6c757d;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+     .grid.active {
+          width: 100%;
+     }
+}
